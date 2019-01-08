@@ -1,0 +1,4 @@
+enum LinkedInLoginStatus {
+  loggedIn,
+  error,
+}
