@@ -77,11 +77,11 @@ class LinkedInLogin {
             ));
 
             webViewPlugin.close();
-            Navigator.pop(context);
+            _popWebView();
           }).catchError((error) {
             _notifyListener(LoginResult(status: LinkedInLoginStatus.error));
             webViewPlugin.close();
-            Navigator.pop(context);
+            _popWebView();
           });
         }
       }
@@ -127,6 +127,12 @@ class LinkedInLogin {
         "&scope=r_basicprofile";
     return url;
   }
+
+  void _popWebView() {
+    Navigator.popUntil(context, (route) {
+      return route.settings.name == this.options.popUntilPageName;
+    });
+  }
 }
 
 class LinkedInOptions {
@@ -135,10 +141,17 @@ class LinkedInOptions {
   final String redirectUrl;
   final String appBarTitle;
 
+  /// The page you want to pop the web view until
+  final String popUntilPageName;
+
   LinkedInOptions({
     @required this.clientId,
     @required this.clientSecret,
     @required this.redirectUrl,
+    @required this.popUntilPageName,
     this.appBarTitle,
-  }) : assert(redirectUrl != null && clientId != null && clientSecret != null);
+  }) : assert(redirectUrl != null &&
+            clientId != null &&
+            clientSecret != null &&
+            popUntilPageName != null);
 }

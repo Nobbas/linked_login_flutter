@@ -35,6 +35,7 @@ class Home extends StatelessWidget {
                 clientSecret: 'Your client secret here.',
                 redirectUrl: 'Your redirect url',
                 appBarTitle: 'Your app bar title',
+                popUntilPageName: '/',
               ),
             );
 
