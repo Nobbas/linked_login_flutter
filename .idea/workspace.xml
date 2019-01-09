@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f0bfd2c-2836-4235-ad62-0c4dd0f91a36" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/linked_in_login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/linked_in_login.dart" afterDir="false" />
-    </list>
+    <list default="true" id="8f0bfd2c-2836-4235-ad62-0c4dd0f91a36" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
     <ignored path="$PROJECT_DIR$/.pub/" />
@@ -23,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/linked_in_login.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="138" column="1" lean-forward="true" selection-start-line="138" selection-start-column="1" selection-end-line="138" selection-end-column="1" />
+            <state relative-caret-position="557">
+              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -66,14 +62,14 @@
         <option value="$PROJECT_DIR$/lib/models/login_result.dart" />
         <option value="$PROJECT_DIR$/lib/sign_in_page.dart" />
         <option value="$PROJECT_DIR$/lib/network_helper.dart" />
-        <option value="$PROJECT_DIR$/lib/linked_in_login.dart" />
         <option value="$PROJECT_DIR$/example/lib/main.dart" />
+        <option value="$PROJECT_DIR$/lib/linked_in_login.dart" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1356" />
-    <option name="y" value="-1035" />
+    <option name="y" value="-1036" />
     <option name="width" value="2042" />
     <option name="height" value="1004" />
   </component>
@@ -122,7 +118,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546986482679" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546986954751" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -159,7 +155,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1356" y="-1035" width="2042" height="1004" extended-state="0" />
+    <frame x="1356" y="-1036" width="2042" height="1004" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
@@ -170,7 +166,7 @@
       <window_info id="Capture Tool" />
       <window_info id="Image Layers" />
       <window_info id="Structure" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1545" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1545" />
       <window_info anchor="bottom" id="Dart Analysis" weight="0.3290461" />
       <window_info anchor="bottom" x="0" y="23" width="1680" height="1027" id="Run" sideWeight="0.49963897" type="FLOATING" weight="0.29796356" />
       <window_info anchor="bottom" id="Android Profiler" show_stripe_button="false" />
@@ -179,7 +175,7 @@
       <window_info anchor="bottom" id="Logcat" />
       <window_info anchor="bottom" id="Flutter Performance" sideWeight="0.500361" side_tool="true" weight="0.29796356" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.3290461" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3290461" />
       <window_info anchor="bottom" id="Messages" weight="0.3290461" />
       <window_info anchor="bottom" id="Debug" weight="0.3290461" />
       <window_info anchor="right" id="Maven" />
@@ -297,8 +293,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/linked_in_login.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="138" column="1" lean-forward="true" selection-start-line="138" selection-start-column="1" selection-end-line="138" selection-end-column="1" />
+        <state relative-caret-position="557">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
