@@ -1,14 +1,53 @@
-# linkedin_login_flutter
+# linkedin_login_flutter_example
 
-A new flutter plugin project.
+## How to use
 
-## Getting Started
+Add dependency.
+```dart
+dependencies:
+  linkedin_login_flutter:
+      git:
+        url: git@github.com:Nobbas/linked_login_flutter.git
+```
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.io/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+Import ```linkedin_login_flutter```.
+```dart
+import 'package:linkedin_login_flutter/linkedin_login_flutter.dart';
+```
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+Create an instance of ```LinkedInLogin```.
+````dart
+final linkedInLogin = LinkedInLogin(
+  context: context,
+  options: LinkedInOptions(
+    clientId: 'Your client id here.',
+    clientSecret: 'Your client secret here.',
+    redirectUrl: 'Your redirect url',
+    appBarTitle: 'Your app bar title',
+    popUntilPageName: '/',
+  ),
+);
+````
+
+Add Result Listener.
+```dart
+linkedInLogin.addResultListener((result) {
+  switch (result.status) {
+    case LinkedInLoginStatus.loggedIn:
+      {
+        print(result.accessToken);
+        print(result.firstName);
+        break;
+      }
+    case LinkedInLoginStatus.error:
+      {
+        break;
+      }
+  }
+});
+```
+
+Call signIn function.
+```dart
+linkedInLogin.signIn();
+```
