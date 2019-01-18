@@ -124,7 +124,7 @@ class LinkedInLogin {
         "&client_id=${this.options.clientId}"
         "&redirect_uri=${this.options.redirectUrl}"
         "&state=testing"
-        "&scope=r_basicprofile";
+        "&scope=r_basicprofile,r_emailaddress";
     return url;
   }
 
