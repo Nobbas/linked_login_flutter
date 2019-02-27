@@ -1,6 +1,6 @@
 name: linkedin_login_flutter
 description: A new flutter plugin project.
-version: 0.0.3
+version: 0.0.4
 author:
 homepage:
 
@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_webview_plugin: ^0.3.0+2
-  http: ^0.12.0+1
+  http: ^0.11.3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
