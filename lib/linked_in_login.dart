@@ -8,6 +8,7 @@ import 'package:linkedin_login_flutter/network_helper.dart';
 const String _DEFAULT_APP_BAR_TITLE = "LinkedIn Login";
 const String _LINKED_IN_AUTH_URL =
     "https://www.linkedin.com/oauth/v2/authorization";
+const String _DEFAULT_ROUTE_NAME = '/lingkedinloginpage';
 
 typedef ResultListener = void Function(LoginResult);
 
@@ -76,11 +77,11 @@ class LinkedInLogin {
               pictureUrl: response.pictureUrl,
             ));
 
-            webViewPlugin.close();
+            await webViewPlugin.close();
             _popWebView();
-          }).catchError((error) {
+          }).catchError((error) async {
             _notifyListener(LoginResult(status: LinkedInLoginStatus.error));
-            webViewPlugin.close();
+            await webViewPlugin.close();
             _popWebView();
           });
         }
@@ -92,18 +93,23 @@ class LinkedInLogin {
     _isRedirectedUrlReceived = false;
 
     Navigator.of(context).push(
-      MaterialPageRoute(builder: (context) {
-        return WebviewScaffold(
-          url: _buildAuthUrl(),
-          initialChild: Center(
-            child: Text('Logged in with LinkedIn! Please close window.'),
-          ),
-          withJavascript: true,
-          appBar: AppBar(
-            title: Text(this.options.appBarTitle ?? _DEFAULT_APP_BAR_TITLE),
-          ),
-        );
-      }),
+      MaterialPageRoute(
+        builder: (context) {
+          return WebviewScaffold(
+            url: _buildAuthUrl(),
+            initialChild: Center(
+              child: Text('Logged in with LinkedIn! Please close window.'),
+            ),
+            withJavascript: true,
+            appBar: AppBar(
+              title: Text(this.options.appBarTitle ?? _DEFAULT_APP_BAR_TITLE),
+            ),
+          );
+        },
+        settings: RouteSettings(
+          name: _DEFAULT_ROUTE_NAME,
+        ),
+      ),
     );
   }
 
@@ -130,7 +136,9 @@ class LinkedInLogin {
 
   void _popWebView() {
     Navigator.popUntil(context, (route) {
-      return route.settings.name == this.options.popUntilPageName;
+      if (route.isFirst) return false;
+
+      return route.settings.name == _DEFAULT_ROUTE_NAME;
     });
   }
 }
@@ -142,16 +150,13 @@ class LinkedInOptions {
   final String appBarTitle;
 
   /// The page you want to pop the web view until
-  final String popUntilPageName;
+  //final String popUntilPageName;
 
   LinkedInOptions({
     @required this.clientId,
     @required this.clientSecret,
     @required this.redirectUrl,
-    @required this.popUntilPageName,
+    //@required this.popUntilPageName,
     this.appBarTitle,
-  }) : assert(redirectUrl != null &&
-            clientId != null &&
-            clientSecret != null &&
-            popUntilPageName != null);
+  }) : assert(redirectUrl != null && clientId != null && clientSecret != null);
 }

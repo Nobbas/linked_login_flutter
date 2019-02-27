@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:linkedin_login_flutter/linkedin_login_flutter.dart';
+import 'package:linkedin_login_flutter_example/linked_in_config.dart';
 
 void main() => runApp(MyApp());
 
@@ -31,11 +32,10 @@ class Home extends StatelessWidget {
             final linkedInLogin = LinkedInLogin(
               context: context,
               options: LinkedInOptions(
-                clientId: 'Your client id here.',
-                clientSecret: 'Your client secret here.',
-                redirectUrl: 'Your redirect url',
+                clientId: LinkedInConfig.CLIENT_ID,
+                clientSecret: LinkedInConfig.CLIENT_SECRET,
+                redirectUrl: LinkedInConfig.REDIRECT_URL,
                 appBarTitle: 'Your app bar title',
-                popUntilPageName: '/',
               ),
             );
 
